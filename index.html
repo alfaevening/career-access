@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Career Access — 24/7 AI Employment Navigator</title>
+<meta name="description" content="Free 24/7 AI employment support for CV-to-vacancy matching, ATS-friendly CV tailoring, applications, interview preparation and trusted employment information. Built by CulturaLinks Community CIC.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Public+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --indigo:#2e266d;
+  --indigo-deep:#201a4d;
+  --amber:#fbd659;
+  --sage:#8fa88e;
+  --grey:#cfcfcf;
+  --white:#ffffff;
+  --ink:#211c47;
+  --paper:#faf9f7;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:'Public Sans',system-ui,sans-serif;
+  color:var(--ink);
+  background:var(--paper);
+  line-height:1.55;
+}
+h1,h2,h3{
+  font-family:'Fraunces',Georgia,serif;
+  font-weight:600;
+  line-height:1.12;
+  margin:0;
+  letter-spacing:-0.01em;
+}
+a{color:inherit;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px;}
+:focus-visible{outline:3px solid var(--amber);outline-offset:3px;}
+
+@media (prefers-reduced-motion:reduce){
+  *{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;}
+}
+
+/* NAV */
+header{
+  position:sticky;
+  top:0;
+  z-index:20;
+  background:rgba(250,249,247,0.93);
+  backdrop-filter:blur(8px);
+  border-bottom:1px solid rgba(46,38,109,0.08);
+}
+.navbar{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:18px;
+  padding:16px 24px;
+}
+.brand{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  font-family:'Fraunces',serif;
+  font-weight:600;
+  font-size:1.05rem;
+  color:var(--indigo);
+  text-decoration:none;
+}
+.brand .dot{width:10px;height:10px;border-radius:50%;background:var(--amber);}
+.nav-links{display:flex;align-items:center;gap:18px;}
+.nav-link{
+  text-decoration:none;
+  color:#4a4373;
+  font-size:.9rem;
+  font-weight:600;
+}
+.nav-link:hover{color:var(--indigo);}
+.nav-cta{
+  background:var(--indigo);
+  color:var(--white);
+  text-decoration:none;
+  padding:10px 20px;
+  border-radius:100px;
+  font-weight:600;
+  font-size:.9rem;
+  transition:background .2s ease;
+}
+.nav-cta:hover{background:var(--indigo-deep);}
+
+/* HERO */
+.hero{
+  padding:88px 0 64px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::before{
+  content:"";
+  position:absolute;
+  top:-140px;
+  right:-160px;
+  width:480px;
+  height:480px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(251,214,89,.38),rgba(251,214,89,0) 70%);
+  pointer-events:none;
+}
+.eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  font-size:.82rem;
+  font-weight:600;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--indigo);
+  background:rgba(143,168,142,.18);
+  padding:7px 14px;
+  border-radius:100px;
+  margin-bottom:22px;
+}
+.eyebrow::before{content:"●";color:var(--sage);font-size:.6rem;}
+.hero h1{
+  font-size:clamp(2.3rem,5vw,3.6rem);
+  color:var(--indigo);
+  max-width:17ch;
+}
+.hero .sub{
+  margin-top:22px;
+  font-size:1.18rem;
+  max-width:61ch;
+  color:#413a6e;
+}
+.hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:34px;}
+
+.btn-primary,.btn-ghost{
+  display:inline-block;
+  text-decoration:none;
+  border-radius:100px;
+  font-weight:600;
+  font-size:1rem;
+}
+.btn-primary{
+  background:var(--indigo);
+  color:var(--white);
+  padding:15px 28px;
+  transition:transform .15s ease,background .2s ease;
+}
+.btn-primary:hover{background:var(--indigo-deep);transform:translateY(-1px);}
+.btn-ghost{
+  border:1.5px solid var(--indigo);
+  color:var(--indigo);
+  padding:14px 26px;
+  transition:background .15s ease;
+}
+.btn-ghost:hover{background:rgba(46,38,109,.06);}
+
+/* NOTE STRIP */
+.honest{background:var(--indigo);color:var(--white);padding:20px 0;}
+.honest .wrap{display:flex;align-items:center;gap:14px;flex-wrap:wrap;}
+.honest strong{color:var(--amber);}
+.honest p{margin:0;font-size:.98rem;opacity:.94;}
+
+/* SHARED SECTIONS */
+.section{padding:88px 0;}
+.section-head{max-width:64ch;margin-bottom:44px;}
+.section-head .tag{
+  color:var(--sage);
+  font-weight:700;
+  font-size:.85rem;
+  letter-spacing:.05em;
+  text-transform:uppercase;
+}
+.section-head h2{
+  font-size:clamp(1.7rem,3.4vw,2.4rem);
+  color:var(--indigo);
+  margin-top:10px;
+}
+.section-head p{
+  margin:15px 0 0;
+  color:#4a4373;
+  font-size:1.03rem;
+}
+
+/* PERSONAS */
+.persona-stage{
+  background:var(--white);
+  border:1px solid rgba(46,38,109,.1);
+  border-radius:20px;
+  padding:44px;
+  min-height:220px;
+  position:relative;
+  box-shadow:0 20px 40px -28px rgba(46,38,109,.35);
+}
+.persona{
+  position:absolute;
+  inset:44px;
+  opacity:0;
+  transform:translateY(10px);
+  transition:opacity .6s ease,transform .6s ease;
+  pointer-events:none;
+}
+.persona.active{opacity:1;transform:translateY(0);position:relative;inset:auto;}
+.persona .who-line{
+  font-size:1.5rem;
+  font-family:'Fraunces',serif;
+  color:var(--indigo);
+  font-weight:500;
+}
+.persona .where-line{color:var(--sage);font-weight:600;margin-top:4px;font-size:.95rem;}
+.persona .need-line{margin-top:16px;color:#413a6e;font-size:1.05rem;max-width:54ch;}
+.persona-dots{display:flex;gap:8px;margin-top:28px;}
+.persona-dots button{
+  width:9px;height:9px;border-radius:50%;border:none;background:var(--grey);cursor:pointer;padding:0;
+}
+.persona-dots button.active{
+  background:var(--amber);
+  width:26px;
+  border-radius:100px;
+  transition:width .3s ease;
+}
+
+/* FEATURES */
+.feature-list{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:2px;
+  background:rgba(46,38,109,.1);
+  border-radius:20px;
+  overflow:hidden;
+  border:1px solid rgba(46,38,109,.1);
+}
+.feature{background:var(--white);padding:32px 30px;}
+.feature .num{
+  font-family:'Fraunces',serif;
+  font-size:.9rem;
+  font-weight:600;
+  color:#bd8a08;
+  margin-bottom:14px;
+  display:block;
+}
+.feature h3{font-size:1.15rem;color:var(--indigo);font-weight:600;}
+.feature p{margin:10px 0 0;color:#4a4373;font-size:.97rem;}
+
+/* HUMAN SUPPORT */
+.human{
+  background:var(--white);
+  border-top:1px solid rgba(46,38,109,.08);
+  border-bottom:1px solid rgba(46,38,109,.08);
+}
+.split{
+  display:grid;
+  grid-template-columns:1.15fr .85fr;
+  gap:50px;
+  align-items:center;
+}
+.quote-card{
+  background:rgba(143,168,142,.16);
+  border-radius:20px;
+  padding:32px;
+}
+.quote-card strong{display:block;color:var(--indigo);font-family:'Fraunces',serif;font-size:1.35rem;}
+.quote-card p{margin:14px 0 0;color:#413a6e;}
+.small-note{font-size:.9rem;color:#6c658f;margin-top:16px;}
+
+/* ORGANISATIONS */
+.org-card{
+  background:var(--indigo);
+  color:var(--white);
+  border-radius:24px;
+  padding:44px;
+  position:relative;
+  overflow:hidden;
+}
+.org-card::after{
+  content:"";
+  position:absolute;
+  width:320px;
+  height:320px;
+  border-radius:50%;
+  right:-120px;
+  bottom:-140px;
+  background:radial-gradient(circle,rgba(251,214,89,.22),rgba(251,214,89,0) 70%);
+}
+.org-card h2{font-size:clamp(1.8rem,3.5vw,2.5rem);max-width:18ch;}
+.org-card p{max-width:65ch;color:rgba(255,255,255,.88);font-size:1.05rem;}
+.org-card .btn-primary{background:var(--amber);color:var(--indigo-deep);position:relative;z-index:2;}
+.org-card .btn-primary:hover{background:#ffe277;}
+
+/* CTA */
+.cta{background:var(--sage);padding:80px 0;position:relative;overflow:hidden;}
+.cta::after{
+  content:"";
+  position:absolute;
+  bottom:-120px;
+  left:-100px;
+  width:340px;
+  height:340px;
+  border-radius:50%;
+  background:radial-gradient(circle,rgba(255,255,255,.25),rgba(255,255,255,0) 70%);
+}
+.cta-box{max-width:680px;position:relative;z-index:2;}
+.cta h2{color:var(--indigo-deep);font-size:clamp(1.8rem,3.6vw,2.5rem);}
+.cta p{color:#20351f;font-size:1.08rem;margin-top:14px;max-width:56ch;}
+.cta-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px;}
+.cta-note{margin-top:14px;font-size:.88rem;color:#20351f;opacity:.82;}
+
+/* FOOTER */
+footer{padding:48px 0;}
+.footer-row{display:flex;justify-content:space-between;align-items:flex-start;flex-wrap:wrap;gap:22px;}
+.footer-brand{font-family:'Fraunces',serif;color:var(--indigo);font-weight:600;}
+.footer-links{display:flex;flex-wrap:wrap;gap:18px;font-size:.92rem;max-width:620px;justify-content:flex-end;}
+.footer-links a{text-decoration:none;color:#4a4373;}
+.footer-links a:hover{color:var(--indigo);}
+.built-by{font-size:.86rem;color:#8b84ab;margin-top:6px;}
+
+@media (max-width:760px){
+  .nav-link{display:none;}
+  .split{grid-template-columns:1fr;}
+  .persona-stage{padding:30px;}
+  .persona{inset:30px;}
+  .navbar{padding:14px 20px;}
+  .org-card{padding:34px 28px;}
+}
+</style>
+</head>
+
+<body>
+<header>
+  <div class="navbar wrap">
+    <a class="brand" href="#top"><span class="dot"></span>Career Access</a>
+    <div class="nav-links">
+      <a class="nav-link" href="#what">What it does</a>
+      <a class="nav-link" href="#human-support">Human support</a>
+      <a class="nav-link" href="#organisations">For organisations</a>
+      <a class="nav-cta" href="#interest">Register interest</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+<section class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Coming soon · built by CulturaLinks</span>
+
+    <h1>Free employment support, when you actually need it.</h1>
+
+    <p class="sub">
+      <strong>Career Access — 24/7 AI Employment Navigator</strong> helps you compare your CV with real vacancies,
+      create an ATS-friendly application, prepare for interviews and find trusted employment information and
+      signposting. Free for individual jobseekers.
+    </p>
+
+    <div class="hero-actions">
+      <a class="btn-primary" href="#interest">Register interest</a>
+      <a class="btn-ghost" href="#what">See what it does</a>
+    </div>
+  </div>
+</section>
+
+<div class="honest">
+  <div class="wrap">
+    <p>
+      <strong>We are building this now.</strong>
+      Career Access is not yet a finished public service. Register your interest if you would like to be invited to a pilot when a version is ready to test.
+    </p>
+  </div>
+</div>
+
+<section class="section wrap">
+  <div class="section-head">
+    <span class="tag">Who it is for</span>
+    <h2>For people who need more than generic job-search advice.</h2>
+    <p>
+      Career Access is being designed around real employment barriers, including disrupted careers,
+      limited UK labour-market experience, caring responsibilities, low confidence, language barriers
+      and the practical pressure of applying for work without support on hand.
+    </p>
+  </div>
+
+  <div class="persona-stage" id="personaStage" aria-live="polite"></div>
+  <div class="persona-dots" id="personaDots"></div>
+</section>
+
+<section class="section wrap" id="what">
+  <div class="section-head">
+    <span class="tag">What it does</span>
+    <h2>Focused on the employment tasks people need most.</h2>
+  </div>
+
+  <div class="feature-list">
+
+    <div class="feature">
+      <span class="num">01</span>
+      <h3>CV to vacancy matching</h3>
+      <p>Paste a real job advert and compare it with your existing CV. See where your experience matches and where stronger evidence may be needed.</p>
+    </div>
+
+    <div class="feature">
+      <span class="num">02</span>
+      <h3>ATS-friendly CV tailoring</h3>
+      <p>Tailor your CV around a real vacancy using relevant skills, evidence and terminology while keeping your genuine experience at the centre.</p>
+    </div>
+
+    <div class="feature">
+      <span class="num">03</span>
+      <h3>Application support</h3>
+      <p>Work through cover letters, supporting statements and application questions with guidance linked to the role you are applying for.</p>
+    </div>
+
+    <div class="feature">
+      <span class="num">04</span>
+      <h3>Interview preparation</h3>
+      <p>Practise questions based on the actual vacancy, build STAR examples and prepare for the conversation before the real interview.</p>
+    </div>
+
+    <div class="feature">
+      <span class="num">05</span>
+      <h3>Employment information</h3>
+      <p>Find general employment information and trusted sources when questions come up. Career Access is being designed to use authoritative sources such as GOV.UK and ACAS where appropriate.</p>
+    </div>
+
+    <div class="feature">
+      <span class="num">06</span>
+      <h3>Signposting to human help</h3>
+      <p>Some situations need a person, not an AI answer. Career Access is designed to help users identify when further professional, community or specialist support may be appropriate.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section human" id="human-support">
+  <div class="wrap split">
+
+    <div>
+      <div class="section-head" style="margin-bottom:24px">
+        <span class="tag">Human support still matters</span>
+        <h2>Career Access supports Employment Advisers. It does not replace them.</h2>
+      </div>
+
+      <p>
+        Employment support often happens at a scheduled time. Vacancies, interview invitations and workplace questions do not.
+      </p>
+
+      <p>
+        Career Access is being developed to extend practical support between appointments while keeping clear boundaries around situations that need human judgement, safeguarding, specialist help or professional advice.
+      </p>
+
+      <p>
+        In Somerset, <strong>Career Runway by CulturaLinks</strong> provides personalised employability support with CVs, applications, interviews and the move into work. Career Runway is the first real-world environment where Career Access is being tested and improved.
+      </p>
+
+      <a class="btn-ghost" href="https://www.culturalinks.co.uk/career-runway" target="_blank" rel="noopener">Get human support through Career Runway</a>
+
+      <p class="small-note">
+        Career Access provides general employment information and signposting. It is not a legal adviser and does not provide legal advice.
+      </p>
+    </div>
+
+    <div class="quote-card">
+      <strong>One programme. Two kinds of support.</strong>
+      <p><strong>Career Runway</strong> provides human employability support.</p>
+      <p><strong>Career Access</strong> provides digital support when the next step cannot wait for the next appointment.</p>
+    </div>
+
+  </div>
+</section>
+
+<section class="section wrap" id="organisations">
+  <div class="org-card">
+    <span class="tag" style="color:var(--amber)">For organisations</span>
+    <h2>Interested in extending employment support beyond appointments?</h2>
+
+    <p>
+      Career Access is being developed not only as a free tool for individual jobseekers, but as digital employment infrastructure that can complement adviser-led services.
+    </p>
+
+    <p>
+      CulturaLinks is interested in conversations with councils, employability providers, colleges, housing associations, community organisations and other public or third-sector partners around pilots, co-design, evaluation and responsible use of AI in employment support.
+    </p>
+
+    <a class="btn-primary"
+       href="mailto:hello@culturalinks.co.uk?subject=Career%20Access%20partnership%20enquiry">
+       Discuss a Career Access pilot
+    </a>
+  </div>
+</section>
+
+<section class="cta" id="interest">
+  <div class="wrap">
+    <div class="cta-box">
+      <h2>Want to be one of the first people to try Career Access?</h2>
+
+      <p>
+        Send us an email and tell us, if you want to, what part of finding work you need the most help with.
+        We will use early pilot feedback to decide what should be built next.
+      </p>
+
+      <div class="cta-actions">
+        <a class="btn-primary"
+           href="mailto:hello@culturalinks.co.uk?subject=Career%20Access%20pilot%20interest&body=Hello%20CulturaLinks%2C%0A%0AI%20would%20like%20to%20register%20my%20interest%20in%20the%20Career%20Access%20pilot.%0A%0AThe%20employment%20support%20I%20would%20most%20like%20help%20with%20is%3A%0A">
+           Register interest
+        </a>
+
+        <a class="btn-ghost"
+           href="https://www.culturalinks.co.uk/career-runway"
+           target="_blank"
+           rel="noopener">
+           Career Runway
+        </a>
+      </div>
+
+      <p class="cta-note">
+        The register-interest button opens your email application. This website does not submit your personal information through an online form.
+      </p>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="wrap">
+  <div class="footer-row">
+    <div>
+      <div class="footer-brand">Career Access — 24/7 AI Employment Navigator</div>
+      <div class="built-by">Built by CulturaLinks Community CIC, Somerset</div>
+    </div>
+
+    <div class="footer-links">
+      <a href="https://www.culturalinks.co.uk" target="_blank" rel="noopener">CulturaLinks</a>
+      <a href="https://www.culturalinks.co.uk/career-runway" target="_blank" rel="noopener">Career Runway</a>
+      <a href="https://www.culturalinks.co.uk/our-policies" target="_blank" rel="noopener">Policies &amp; privacy</a>
+      <a href="mailto:hello@culturalinks.co.uk">hello@culturalinks.co.uk</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const personas = [
+  {
+    who: "Iryna, rebuilding her career after moving to the UK",
+    where: "Taunton",
+    need: "She has years of accounting experience but needs to understand how to present that experience for UK vacancies and tailor her CV without starting from zero every time."
+  },
+  {
+    who: "Priya, returning after a career break",
+    where: "Wellington",
+    need: "She wants to understand what has changed in her field, explain the gap confidently and prepare applications around the experience she already has."
+  },
+  {
+    who: "Josh, 19, applying for his first proper job",
+    where: "Chard",
+    need: "He has never written a professional CV or done a formal interview and needs practical support he can use when he is ready to sit down and work on it."
+  },
+  {
+    who: "Marek, changing direction after years in one industry",
+    where: "Ilminster",
+    need: "He has strong transferable skills but finds it difficult to describe them in the language employers use and wants to prepare carefully for one specific vacancy."
+  }
+];
+
+const stage = document.getElementById('personaStage');
+const dotsWrap = document.getElementById('personaDots');
+let current = 0;
+let timer;
+
+function render(){
+  stage.innerHTML = personas.map((p,i) => `
+    <div class="persona ${i===current ? 'active' : ''}">
+      <div class="who-line">${p.who}</div>
+      <div class="where-line">${p.where}, Somerset</div>
+      <div class="need-line">${p.need}</div>
+    </div>
+  `).join('');
+
+  dotsWrap.innerHTML = personas.map((_,i) =>
+    `<button aria-label="Show story ${i+1}" class="${i===current ? 'active' : ''}" data-i="${i}"></button>`
+  ).join('');
+
+  dotsWrap.querySelectorAll('button').forEach(btn => {
+    btn.addEventListener('click', () => {
+      current = parseInt(btn.dataset.i,10);
+      render();
+      resetTimer();
+    });
+  });
+}
+
+function next(){
+  current = (current + 1) % personas.length;
+  render();
+}
+
+function resetTimer(){
+  clearInterval(timer);
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if(!reduceMotion){
+    timer = setInterval(next, 5200);
+  }
+}
+
+render();
+resetTimer();
+</script>
+
+</body>
+</html>
